@@ -24,7 +24,7 @@ jobs:
       run: |
         pip install pipenv codecov
         pipenv sync --dev
-
+        cp contrib/env-sample .env
     - name: Tests with pytest
       run: |
         pipenv run pytest --cov=djangoprojectjfobatista
