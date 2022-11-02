@@ -24,10 +24,3 @@ jobs:
       run: |
         pip install pipenv codecov
         pipenv sync --dev
-    - name: Lint with flake8
-      run: |
-        pipenv run .
-    - name: Cobertura de testes com codecov
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
