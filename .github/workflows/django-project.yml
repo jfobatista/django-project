@@ -24,7 +24,10 @@ jobs:
       run: |
         pip install pipenv codecov
         pipenv sync --dev
-    - name: Cobertura de testes com codecov
+    - name: Tests with pytest
+      run: |
+        pipenv run pytest --cov=djangoprojectjfobatista
+    - name: Coverage with codecov
       uses: codecov/codecov-action@v1
       with:
         token: ${{secrets.CODECOV_TOKEN}}
