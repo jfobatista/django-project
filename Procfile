@@ -1,1 +1,1 @@
-web: gunicorn djangoprojectjfobatista.wsgi --log.file -
+web: gunicorn djangoprojectjfobatista.wsgi --log-file -
