@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collectfast',
     'django.contrib.staticfiles',
     'djangoprojectjfobatista.base.migrations',
 ]
@@ -113,6 +114,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+
 # Configuração de ambiente de desenvolvimento
 # arquivos estáticos
 STATIC_URL = 'static/'
@@ -121,6 +123,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # uploads
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+
+COLLECTFAST_ENABLED = False
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -140,6 +144,10 @@ if AWS_ACCESS_KEY_ID:
     AWS_QUERTYSTRING_AUTH = True # gerar urls assinadas
     AWS_S3_CUSTOM_DOMAIN = None # para usar dominio s3
     AWS_DEFAULT_ACL = 'private' # arquivos do s3 fiquem privados
+
+    COLLECTFAST_ENABLED = True
+
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
     # Static Assets
     # ------------------------------------------------------------------
