@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
-    'djangoprojectjfobatista.base.migrations',
+    'djangoprojectjfobatista.base',
 ]
 
 MIDDLEWARE = [
