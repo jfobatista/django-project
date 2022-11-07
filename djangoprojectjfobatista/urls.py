@@ -20,5 +20,5 @@ from djangoprojectjfobatista.base.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('djangoprojectjfobatista')),
+    path('', include('djangoprojectjfobatista.base.urls')),
 ]
