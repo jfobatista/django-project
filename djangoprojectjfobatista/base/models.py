@@ -67,7 +67,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     EMAIL_FIELD = "email"
     # utilizar o email como username
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["email"]
+    REQUIRED_FIELDS = []
 
     class Meta:
         verbose_name = _("user")
