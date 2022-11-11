@@ -1,4 +1,5 @@
 from django.urls import path
+
 from djangoprojectjfobatista.base.views import home
 
 app_name = 'base'
