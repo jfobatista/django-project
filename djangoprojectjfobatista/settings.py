@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'djangoprojectjfobatista.base',
+    'djangoprojectjfobatista.aperitivos',
 ]
 
 AUTH_USER_MODEL = 'base.User'
