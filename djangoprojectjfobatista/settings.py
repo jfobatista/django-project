@@ -155,7 +155,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_AUTO_CREATE_BUCKET = False # não iremos criar buckets automaticamente
     AWS_QUERYSTRING_AUTH = True # gerar urls assinadas
     AWS_S3_CUSTOM_DOMAIN = None # para usar dominio s3
-    AWS_DEFAULT_ACL = 'private' # arquivos do s3 fiquem privados
+    AWS_DEFAULT_ACL = None # arquivos do s3 fiquem privados
 
     COLLECTFAST_ENABLED = True
     COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
