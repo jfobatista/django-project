@@ -23,8 +23,14 @@ def test_title_video(resp, titulo):
     assert_contains(resp, titulo)
 
 
-# def test_conteudo_video(resp):
-#     assert_contains(resp, '<iframe src="https://player.vimeo.com/video/770026394?h=d7374aab3a&amp;badge=0'
-#                           '&amp;autopause=0&amp;player_id=0&amp;app_id=58479" ')
-#
-#
+@pytest.mark.parametrize(
+    'slug',
+    [
+        'bituca',
+        'peek-inside'
+    ]
+)
+def test_link_video(resp, slug):
+    video_link = reverse('aperitivos:video', args=(slug,))
+    assert_contains(resp, f'href="{video_link}"')
+

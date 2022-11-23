@@ -12,7 +12,11 @@
 			<div class="card-body">
 				<ol>
 					{% for video in videos %}
-						<li>{{ video.titulo|default:"faltando titulo"}}</li>
+						<li>
+							<a href="{{ video.get_absolute_url }}">
+								{{ video.titulo|default:"faltando titulo"}}
+							</a>
+						</li>
 						{% empty %}
 						<li>Não foi encontrado nenhum video</li>
 					{% endfor %}
