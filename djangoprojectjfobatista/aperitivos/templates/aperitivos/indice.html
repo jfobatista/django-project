@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block title %} Cards {% endblock title %}
+
+{% block description %} Página com os Cards {% endblock description %}
+
+{% block body %}
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<h1 class="card-header"> Lista dos Cards </h1>
+			<div class="card-body">
+				<ol>
+					{% for video in videos %}
+						<li>{{ video.titulo|default:"faltando titulo"}}</li>
+						{% empty %}
+						<li>Não foi encontrado nenhum video</li>
+					{% endfor %}
+				</ol>
+			</div>
+			<div class="card-footer">
+				Card footer
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock body %}
