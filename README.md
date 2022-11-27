@@ -1,8 +1,5 @@
 # django-project
 
-
-[![codecov](https://codecov.io/gh/jfobatista/django-project/branch/main/graph/badge.svg?token=SpPFL9AHKR)](https://codecov.io/gh/jfobatista/django-project)
-
 [![codecov](https://codecov.io/gh/jfobatista/django-project/branch/main/graph/badge.svg?token=SpPFL9AHKR)](https://codecov.io/gh/jfobatista/django-project)
 
 ### <strong>Instruções para instalação</strong>:
