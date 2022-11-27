@@ -1,21 +1,10 @@
 from django.shortcuts import render
-from django.urls import reverse
 
-
-class Video:
-    def __init__(self, slug, title, titulo, vimeo_id):
-        self.slug = slug
-        self.title = title
-        self.titulo = titulo
-        self.id = vimeo_id
-
-    def get_absolute_url(self):
-        return reverse('aperitivos:video', args=(self.slug,))
-
+from djangoprojectjfobatista.aperitivos.models import Video
 
 videos = [
-    Video('bituca', 'Cards - Bituquinha', 'Bituquinha', 770026394),
-    Video('peek-inside', 'Cards - Peek Inside', 'Peek Inside', 774443580),
+    Video(slug='bituca', title='Cards - Bituquinha', titulo='Bituquinha', vimeo_id='770026394'),
+    Video(slug='peek-inside', title='Cards - Peek Inside', titulo='Peek Inside', vimeo_id='774443580'),
 ]
 
 videos_dct = {v.slug: v for v in videos}
@@ -26,5 +15,5 @@ def indice(request):
 
 
 def video(request, slug):
-    video = videos_dct[slug]
+    video = Video.objects.get(slug=slug)
     return render(request, 'aperitivos/video.html', context={'video': video})

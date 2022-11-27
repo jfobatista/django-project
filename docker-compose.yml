@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  database:
+    container_name: django-project
+    image: postgres
+    restart: always
+    volumes:
+      - ./.pgdata:/var/lib/postgresql/data
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_DB=curso-django
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST=localhost
+    ports:
+      - "5434:5432"
