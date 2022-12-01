@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djangoprojectjfobatista.base',
     'djangoprojectjfobatista.aperitivos',
+    'djangoprojectjfobatista.modulos',
 ]
 
 AUTH_USER_MODEL = 'base.User'
