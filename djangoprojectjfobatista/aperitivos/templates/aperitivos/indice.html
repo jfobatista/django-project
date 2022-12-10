@@ -6,27 +6,27 @@
 
 {% block body %}
 <div class="row">
-	<div class="col-md-12">
-		<div class="card">
-			<h1 class="card-header"> Lista dos Cards </h1>
-			<div class="card-body">
-				<ol>
-					{% for video in videos %}
-						<li>
-							<a href="{{ video.get_absolute_url }}">
-								{{ video.titulo|default:"faltando titulo"}}
-							</a>
-						</li>
-						{% empty %}
-						<li>Não foi encontrado nenhum video</li>
-					{% endfor %}
-				</ol>
-			</div>
-			<div class="card-footer">
-				Card footer
-			</div>
-		</div>
-	</div>
+    <div class="col-md-12">
+        <div class="card">
+            <h1 class="card-header"> Lista dos Cards </h1>
+            <div class="card-body">
+                <ol>
+                    {% for video in videos %}
+                    <li>
+                        <a href="{{ video.get_absolute_url }}">
+                            {{ video.titulo|default:"faltando titulo"}}
+                        </a>
+                    </li>
+                    {% empty %}
+                    <li>Não foi encontrado nenhum video</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="card-footer">
+                Card footer
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock body %}
