@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'djangoprojectjfobatista.base',
     'djangoprojectjfobatista.aperitivos',
     'djangoprojectjfobatista.modulos',
+    'ordered_model',
 ]
 
 AUTH_USER_MODEL = 'base.User'
