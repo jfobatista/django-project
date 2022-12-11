@@ -21,7 +21,8 @@ from djangoprojectjfobatista.settings import DEBUG
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('djangoprojectjfobatista.base.urls')),
-    path('aperitivos/', include('djangoprojectjfobatista.aperitivos.urls'))
+    path('aperitivos/', include('djangoprojectjfobatista.aperitivos.urls')),
+    path('modulos/', include('djangoprojectjfobatista.modulos.urls'))
 ]
 
 if DEBUG:

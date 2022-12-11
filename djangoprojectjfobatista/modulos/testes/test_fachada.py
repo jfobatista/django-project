@@ -11,4 +11,4 @@ def modulos(db):
 
 
 def test_listar_modulos_ordenados(modulos):  # fixture modulos
-    assert list(sorted(modulos, key=lambda modulo: modulo.titulo)) == fachada.listar_metodos_ordenados()
+    assert list(sorted(modulos, key=lambda modulo: modulo.order)) == fachada.listar_metodos_ordenados()
