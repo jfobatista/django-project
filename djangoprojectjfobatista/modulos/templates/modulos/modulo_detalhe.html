@@ -15,6 +15,12 @@
                     <dd>{{modulo.publico}}</dd>
                     <dt>Descição</dt>
                     <dd>{{modulo.descricao}}</dd>
+                    <h2>Aulas</h2>
+                    <ol>
+                        {% for aula in aulas %}
+                            <li>{{ aula.titulo }}</li>
+                        {% endfor %}
+                    </ol>
                 </dl>
 
             </div>
