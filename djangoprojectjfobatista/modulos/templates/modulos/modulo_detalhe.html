@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block title %} {{ modulo.titulo }} {% endblock title %}
+
+{% block description %} Página com detalhes no módulo {{modulo.titulo}} {% endblock description %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <h1 class="card-header"> {{ modulo.titulo }} </h1>
+            <div class="card-body">
+                <dl>
+                    <dt>Público</dt>
+                    <dd>{{modulo.publico}}</dd>
+                    <dt>Descição</dt>
+                    <dd>{{modulo.descricao}}</dd>
+                </dl>
+
+            </div>
+            <div class="card-footer">
+                Card footer
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
